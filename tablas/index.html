@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+<body>
+    <table>
+        <!--Dentro de la etiqueta de <table> tendremos que definir las filas que tendra nuestra tabla-->
+        <tr>
+            <!--Dentro de cada <tr> tendremos que definir cuantas celdas habra en cada fila con la etiqueta <td>-->
+            <td>Celda 1</td>
+            <td>Celda 2</td>
+            <td>Celda 3</td>
+        </tr>
+        <tr>
+            <td>Celda 4</td>
+            <td>Celda 5</td>
+            <td>Celda 6</td>
+        </tr>
+        <tr>
+            <td>Celda 7</td>
+            <td>Celda 8</td>
+            <td>Celda 9</td>
+        </tr>
+    </table>
+    <table>
+        <!--La etiqueta <caption> nos permite anadirle un titulo a la tabla, se tendra que crear al principio
+            de todo, justo despues de crear la etiqueta principal-->
+            <caption>Esta es una tabla de prueba</caption>
+        <tr>
+            <!--El atributo scope indica explicitamente a que celdas afecta una celda de encabezado, en otras palabras
+            indicamos que las otras celdas de su columa o fila, segun lo que especifiques en el scope, seran las afectadas-->
+            <th scope = "row" rowspan="4">Dia</th>
+            <th>Manana</th>
+            <th>Pasado</th>
+            <th>PasadoManana</th>
+        </tr>
+        <tr>
+            <th scope = "row">Condicion</th>
+            <!--Este atributo sirve para fusinar celdas, tendremos dos tipos colspan y rowspan, le tendremos que 
+            indicar el numero de celdas que querremos fusionar. Si indicamos el atributo colspan fusionaremos de forma horizontal las celdas 
+            esten en la misma fila
+            Con rowspan fusionaremos las filas en orden vertical que pertenezcan a la misma columna-->
+
+            <!--IMPORTANTE: Cuando se utilizan conjuntamente en una misma tabla, los atributos colspan y rowspan deben 
+                ser cuidadosamente declarados de forma que no produzcan celdas superpuestas.-->
+            <td colspan="3">Soleado</td>
+            <td>Parcialmente soleado</td>
+            <td>Nublado</td>
+        </tr>
+        <tr>
+            <th scope = "row">Temperatura</th>
+            <td>20 grados</td>
+            <td>27 grados</td>
+            <td>30 grados</td>
+        </tr>
+        <tr>
+            <th scope = "row">Vientos</th>
+            <td>E 13 Km</td>
+            <td>E 20 Km</td>
+            <td>E 25 Km</td>
+        </tr>
+    </table>
+    <table>
+        <!--De esta forma agrupamos las filas que nos proporcionan informacion de encabezado-->
+        <thead>
+            <tr>
+                <th></th>
+                <th>Anthony</th>
+                <th>Lione</th>
+            </tr>
+            
+            <tr>
+                <th>Fecha</th>
+                <th>Entrada</th>
+                <th>Salida</th>
+                <th>Entrada</th>
+                <th>Salida</th>
+            </tr>
+        </thead>
+        <!--Con la etiqueta <tbody> indicamos que filas conformaran el cuerpo de la tabla-->
+        <tbody>
+            <tr>
+                <th>15/07</th>
+                <td>$200,00</td>
+                <td>$50,00</td>
+                <td>$0</td>
+                <td>$0</td>
+            </tr>
+            
+            <tr>
+                <th>28/07</th>
+                <td>$0,00</td>
+                <td>$100,00</td>
+                <td>$100,00</td>
+                <td>$0,00</td>
+            </tr>
+          
+            <tr>
+                <th>09/08</th>
+                <td>$0,00</td>
+                <td>$50,00</td>
+                <td>$0,00</td>
+                <td>$80,00</td>
+            </tr>
+            
+            <tr>
+                <th>22/08</th>
+                <td>$40,00</td>
+                <td>$0,00</td>
+                <td>$0,00</td>
+                <td>$110,00</td>
+            </tr>
+            
+            <tr>
+                <th>25/08</th>
+                <td>$0,00</td>
+                <td>$20,00</td>
+                <td>$0,00</td>
+                <td>$0,00</td>
+            </tr>
+        </tbody>
+        <!--Esto es como el footer de una pagina web, pero en una tabla-->
+        <tfoot>
+            <tr>
+                <th>Balance</th>
+                <td>$20,00</td>
+                <td>$10,00</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
